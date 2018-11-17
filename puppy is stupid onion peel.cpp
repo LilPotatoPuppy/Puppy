@@ -6,7 +6,7 @@ int main(){
 	int a;
 	ifstream puppy;
 	puppy.open("input.txt");
-	puppy>>a;
-	cout<<a<< endl;
+	puppy >> a;
+	cout << a << endl;
 	
 }
