@@ -80,4 +80,20 @@ int main(){
    	int *point = m;
    	cout << *point << endl;
    	cout << *last << endl;
+   	//çàêîí÷èëè ôîðìèðîâàíèå óêàçàòåëåé, ìàññèâà, èñêîìîãî ÷èñëà
+   	bool iwantnoodle = false;
+   	r=0;
+   	while(!iwantnoodle){
+   		if(n%2==0){
+   		    r=n/2;
+   	    	i=r-1;
+   	   		if(m[i]==f){
+   	    		iwantnoodle = true;
+   	    		break;
+			}
+   	    if(m[i]<f)point = &m[i+1];
+   	    if(m[i]>f)last = &m[i];
+		}
+	}
+	if(iwantnoodle)cout << "Number " << f << " exists in massive" << endl;
 }
