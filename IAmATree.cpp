@@ -47,22 +47,36 @@ int main(){
 	k=0;
 	int p=0; //?aca?a n[k]
 	i=0;
+	int ii=0;
 	while(rr<g){
 		p=c[k];
-		while(i<p){
-			cout << min;
-			i+=1;
+		while(ii<p){
+			m[i] = min;
+			ii+=1;
+			i++;
 		}
 		min+=1;
 		rr+=1;
-		i=0;
+		ii=0;
 		k+=1;
 	}
+	i=0;
+	printf("\n");
+	while(i<n){
+		cout << m[i];
+		i++;
+	}
+	i=0;
 	cout << "\n" << endl;
-	int *point = m;
 	printf("Which number ya wanna find in massive? \n");
 	int find=0;
 	cin>>find;
-	i=0;
-   	
+	int *last;
+	while(i<n){
+		if(n-i==1) last = &m[i];
+		i++;
+	}
+   	int *point = m;
+   	cout << *point << endl;
+   	cout << *last << endl;
 }
