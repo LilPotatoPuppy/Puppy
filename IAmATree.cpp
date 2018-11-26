@@ -69,8 +69,9 @@ int main(){
 	i=0;
 	cout << "\n" << endl;
 	printf("Which number ya wanna find in massive? \n");
-	int find=0;
-	cin>>find;
+	int f=0;
+	cin>>f;
+	int *find = &f;
 	int *last;
 	while(i<n){
 		if(n-i==1) last = &m[i];
