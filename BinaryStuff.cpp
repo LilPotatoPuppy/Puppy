@@ -7,9 +7,7 @@ bool dumbie(int f,  int n, int m[], int i, int *point, int *last){
 	if(f>m[i])return dumbie(f, n, &m[n], i, point+=n, last);
 	if(f<m[i])return dumbie(f, n, &m[n], i, point, last+=n);
 	if(f==m[i])return true;
-	if(dumbie)printf("Number exists in massive");
-	if(!dumbie)printf("Number does not exist in massive");
-	return true;
+	return false;
 }
 int main(){
 	int i=0;
@@ -41,7 +39,7 @@ int main(){
 	printf("Which number ya wanna find in massive? \n");
 	int f=0;
 	cin>>f;
-    int *find = &f;
-    iamtired.close();
+        if(dumbie)printf("Number exists in massive");
+        if(!dumbie)printf("Number does not exist in massive");
 }
 
