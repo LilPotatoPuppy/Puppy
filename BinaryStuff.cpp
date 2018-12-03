@@ -1,12 +1,12 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-bool dumbie(int f,  int n, int m[], int i, int *point, int *last){
-	n=n/2;
-	i=n-1;
-	if(f>m[i])return dumbie(f, n, &m[n], i, point+=n, last);
-	if(f<m[i])return dumbie(f, n, &m[n], i, point, last+=n);
-	if(f==m[i])return true;
+bool dumbie(int f, int *point, int *last){
+	int middle=(*last-*point)/2;
+	if(f>middle)return dumbie(f, point, last=&middle);
+	if(f<middle)return dumbie(f, point=&middle, last);
+	if(f==middle)return true;
+	if(f>*last)return false;
 	return false;
 }
 int main(){
@@ -37,9 +37,8 @@ int main(){
 	cout << *point << endl;
 	cout << *last << endl;
 	printf("Which number ya wanna find in massive? \n");
-	int f=0;
+	int f;
 	cin>>f;
+	if(!dumbie)printf("Number does not exist in massive");
         if(dumbie)printf("Number exists in massive");
-        if(!dumbie)printf("Number does not exist in massive");
 }
-
